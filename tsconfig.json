@@ -30,6 +30,7 @@
     },
     "include": [
         "packages/**/*",
+        "example/**/*"
     ],
     // 指定排除的文件
     "exclude": [

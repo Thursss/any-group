@@ -2,7 +2,7 @@
   "name": "any-group",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/index.ems.js",
   "scripts": {
     "dev": "rollup --config ./build/rollup.config.dev.ts --configPlugin typescript -w",
     "build": "rollup --config ./build/rollup.config.prod.ts --configPlugin typescript"

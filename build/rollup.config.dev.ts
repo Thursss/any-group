@@ -29,13 +29,13 @@ export default merge(
       },
     ],
     plugins: [
-      del({
-        targets: [path.resolve(__dirname, '../example/public/dist/*')],
-      }),
-      serve({
-        open: true,
-        contentBase: [path.resolve(__dirname, '../example/public')],
-      }),
+      // del({
+      //   targets: [path.resolve(__dirname, '../example/public/dist/*')],
+      // }),
+      // serve({
+      //   open: true,
+      //   contentBase: [path.resolve(__dirname, '../example/public')],
+      // }),
     ],
   }),
 )

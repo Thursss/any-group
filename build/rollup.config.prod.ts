@@ -13,34 +13,29 @@ import config from '../rollup.config'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-export default // merge(
-// config,
-defineConfig({
-  input: path.resolve(__dirname, '../packages/index.ts'),
-  output: [
-    {
-      dir: './dist',
-      format: 'esm',
-      entryFileNames: '[name].ems.js',
-    },
-    {
-      dir: './dist',
-      format: 'iife',
-      entryFileNames: '[name].iife.js',
-    },
-  ],
-  plugins: [
-    del({
-      targets: ['./dist/*'],
-    }),
-    resolve(),
-    commonjs(),
-    typescript(),
-    postcss(),
-    babel({
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    }),
-  ],
-  external: ['vue'],
-})
-// )
+export default merge(
+  config,
+  defineConfig({
+    input: path.resolve(__dirname, '../packages/index.ts'),
+    output: [
+      {
+        dir: './dist',
+        format: 'esm',
+        entryFileNames: '[name].ems.js',
+      },
+    ],
+    plugins: [
+      del({
+        targets: ['./dist/*'],
+      }),
+      resolve(),
+      commonjs(),
+      typescript(),
+      postcss(),
+      babel({
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      }),
+    ],
+    external: ['vue'],
+  }),
+)

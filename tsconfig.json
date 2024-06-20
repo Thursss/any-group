@@ -35,6 +35,7 @@
     // 指定排除的文件
     "exclude": [
         "node_modules",
-        "./rollup.config.ts"
+        "./rollup.config.ts",
+        // "example"
     ]
 }

@@ -1,5 +1,4 @@
 import { defineConfig } from 'rollup'
-import del from 'rollup-plugin-delete'
 import serve from 'rollup-plugin-serve'
 import { merge } from 'lodash-es'
 import path from 'path'
@@ -16,8 +15,8 @@ export default merge(
     output: [
       {
         dir: path.resolve(__dirname, '../example/public/dist'),
-        format: 'esm',
-        entryFileNames: '[name].ems.js',
+        format: 'es',
+        entryFileNames: '[name].es.js',
       },
       {
         dir: path.resolve(__dirname, '../example/public/dist'),
@@ -29,13 +28,10 @@ export default merge(
       },
     ],
     plugins: [
-      // del({
-      //   targets: [path.resolve(__dirname, '../example/public/dist/*')],
-      // }),
-      // serve({
-      //   open: true,
-      //   contentBase: [path.resolve(__dirname, '../example/public')],
-      // }),
+      serve({
+        open: true,
+        contentBase: [path.resolve(__dirname, '../example/public')],
+      }),
     ],
   }),
 )

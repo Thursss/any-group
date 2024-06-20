@@ -1,17 +1,17 @@
 {
   "name": "any-group",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "dist/index.ems.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "rollup --config ./build/rollup.config.dev.ts --configPlugin typescript -w",
     "build": "rollup --config ./build/rollup.config.prod.ts --configPlugin typescript"
   },
-  "module": "dist/es/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "any-group": "^1.0.6",
     "lodash-es": "^4.17.21",
     "vue": "^3.4.27"
   },

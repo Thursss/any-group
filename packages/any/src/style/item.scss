@@ -1,23 +1,28 @@
-.any-item {
+.any-item__content {
   position: relative;
   height: 100%;
   flex: 1;
   overflow: auto;
   min-width: 1px;
-  .resize {
+  .any-item__resize {
     position: absolute;
     top: 0;
     right: 0;
-    width: 2px;
     height: 100%;
-    background-color: #d6d6d6;
-    cursor: col-resize;
-    transition: box-shadow 0.3s;
-    &:hover {
-      box-shadow: 3px 2px 3px 3px #b8b8b8;
+    min-width: 4px;
+    .any-item__resize-body {
+      margin: auto;
+      width: 2px;
+      height: 100%;
+      background-color: #d6d6d6;
+      transition: box-shadow 0.3s;
+      cursor: col-resize;
+      &:hover {
+        box-shadow: 3px 2px 3px 3px #b8b8b8;
+      }
     }
   }
-  &:last-child .resize {
+  &:last-child .any-item__resize {
     display: none;
   }
 }

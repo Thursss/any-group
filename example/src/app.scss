@@ -1,5 +1,18 @@
-.container {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.any-group {
   width: 100%;
   height: 500px;
   margin: 0;
+  .resize {
+    width: 5px;
+    height: 100%;
+    background-color: antiquewhite;
+  }
 }

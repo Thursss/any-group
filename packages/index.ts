@@ -1,6 +1,8 @@
 import { App } from 'vue'
 import { AnyGroup, AnyItem } from '@/any'
 
+import './index.scss'
+
 const components = { AnyGroup, AnyItem }
 
 const install = {

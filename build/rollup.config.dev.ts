@@ -30,6 +30,7 @@ export default merge(
     plugins: [
       serve({
         open: true,
+        port: 4000,
         contentBase: [path.resolve(__dirname, '../example/public')],
       }),
     ],

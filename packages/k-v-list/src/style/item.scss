@@ -1,0 +1,15 @@
+.any-k-v-item {
+  display: flex;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .any-k-v-item__label {
+    display: inline-block; /* 宽度由内容决定 */
+    white-space: nowrap; /* 防止文本换行 */
+    flex: 0 0 auto; /* label 不伸缩，宽度由内容或设置决定 */
+    color: #999999;
+  }
+  .any-k-v-item__body {
+    flex: 1;
+  }
+}

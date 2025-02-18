@@ -1,9 +1,10 @@
 import { App } from 'vue'
 import { AnyGroup, AnyItem } from '@/any'
+import { AnyKVList, AnyKVItem } from '@/k-v-list'
 
 import './index.scss'
 
-const components = { AnyGroup, AnyItem }
+const components = { AnyGroup, AnyItem, AnyKVList, AnyKVItem }
 
 const install = {
   install(app: App) {
@@ -12,6 +13,6 @@ const install = {
     }
   },
 }
-
-export { AnyGroup, AnyItem }
+const a: number = 1
+export { AnyGroup, AnyItem, AnyKVList, AnyKVItem, a }
 export default install

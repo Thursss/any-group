@@ -13,6 +13,6 @@ const install = {
     }
   },
 }
-const a: number = 1
-export { AnyGroup, AnyItem, AnyKVList, AnyKVItem, a }
+
+export { AnyGroup, AnyItem, AnyKVList, AnyKVItem }
 export default install

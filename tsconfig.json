@@ -22,10 +22,14 @@
         "isolatedModules": true,
         "noEmit": false,
         "baseUrl": "./",
+        "types": ["vite/client", "jest"],
         "paths": {
             "@/*": [
                 "packages/*"
-            ]
+            ],
+            "~/*": [
+                "utils/*"
+            ],
         }
     },
     "include": [

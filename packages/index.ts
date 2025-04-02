@@ -1,6 +1,6 @@
 import { App } from 'vue'
-import { AnyGroup, AnyItem } from '@/any'
-import { AnyKVList, AnyKVItem } from '@/k-v-list'
+import { AnyGroup, AnyItem } from './any'
+import { AnyKVList, AnyKVItem } from './k-v-list'
 
 import './index.scss'
 

@@ -9,7 +9,8 @@ export default {
   },
   moduleNameMapper: {
     // 处理别名（与 tsconfig.json 中的 paths 一致）
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/packages/$1',
+    '^~/(.*)$': '<rootDir>/utils/$1',
     // 处理静态资源（如 CSS）
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },

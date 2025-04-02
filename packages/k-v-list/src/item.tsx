@@ -1,4 +1,4 @@
-import { ref, defineComponent, PropType, inject, computed } from 'vue'
+import { defineComponent, inject, computed } from 'vue'
 
 import './style/item.scss'
 

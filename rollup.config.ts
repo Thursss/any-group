@@ -26,7 +26,12 @@ export default defineConfig({
     // }),
     resolve(),
     commonjs(),
-    typescript(),
+    typescript({
+      exclude: [
+        '**/__tests__/**/*.test.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[jt]s?(x)',
+      ],
+    }),
     postcss(),
     babel({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],

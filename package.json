@@ -31,6 +31,7 @@
     "@types/jest": "^29.5.14",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.13.17",
+    "@vitejs/plugin-vue": "^5.2.3",
     "@vue/babel-plugin-jsx": "^1.2.2",
     "@vue/compiler-sfc": "^3.4.27",
     "@vue/test-utils": "2.4.0-alpha.2",
@@ -54,6 +55,7 @@
     "ts-jest": "^29.3.1",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
+    "vite": "^6.2.4",
     "vue-jest": "5.0.0-alpha.10"
   }
 }

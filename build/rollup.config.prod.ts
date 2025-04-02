@@ -11,7 +11,10 @@ const __dirname = path.dirname(__filename)
 export default merge(
   config,
   defineConfig({
-    input: path.resolve(__dirname, '../packages/index.ts'),
+    input: {
+      'index': path.resolve(__dirname, '../packages/index.ts'),
+      'utils': path.resolve(__dirname, '../utils/index.ts'),
+    },
     output: [
       {
         dir: './dist',

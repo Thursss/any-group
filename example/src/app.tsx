@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { AnyGroup, AnyItem, AnyKVList, AnyKVItem } from '@/index'
+import { AnyGroup, AnyItem, AnyKVList, AnyKVItem, AnyTooltip } from '@/index'
 import './app.scss'
 
 export default defineComponent({
@@ -7,6 +7,14 @@ export default defineComponent({
   render() {
     return (
       <div>
+        <h1>AnyTooltip</h1>
+        <AnyTooltip title="x2x2x2x2">
+          {{
+            // title: () => <div>xxxxxx</div>,
+            default: () => <div>ssssss</div>,
+          }}
+        </AnyTooltip>
+        <hr />
         <h1>AnyKVList</h1>
         <AnyKVList
           align="right"

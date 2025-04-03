@@ -59,8 +59,6 @@ export default defineComponent({
           if (label) {
             const width = label.clientWidth
 
-            console.log('width: ', width, 'maxWidth: ', maxWidth.value)
-
             if (width > maxWidth.value) {
               maxWidth.value = width
             }

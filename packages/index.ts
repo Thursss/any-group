@@ -1,10 +1,11 @@
 import { App } from 'vue'
 import { AnyGroup, AnyItem } from './any'
 import { AnyKVList, AnyKVItem } from './k-v-list'
+import { AnyTooltip } from './tooltip'
 
-import './index.scss'
+import './_style/index.scss'
 
-const components = { AnyGroup, AnyItem, AnyKVList, AnyKVItem }
+const components = { AnyGroup, AnyItem, AnyKVList, AnyKVItem, AnyTooltip }
 
 const install = {
   install(app: App) {
@@ -14,5 +15,5 @@ const install = {
   },
 }
 
-export { AnyGroup, AnyItem, AnyKVList, AnyKVItem }
+export { AnyGroup, AnyItem, AnyKVList, AnyKVItem, AnyTooltip }
 export default install

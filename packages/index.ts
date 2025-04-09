@@ -2,10 +2,18 @@ import { App } from 'vue'
 import { AnyGroup, AnyItem } from './any'
 import { AnyKVList, AnyKVItem } from './k-v-list'
 import { AnyTooltip } from './tooltip'
+import { AnyEllipsisTooltip } from './ellipsis-tooltip'
 
 import './_style/index.scss'
 
-const components = { AnyGroup, AnyItem, AnyKVList, AnyKVItem, AnyTooltip }
+const components = {
+  AnyGroup,
+  AnyItem,
+  AnyKVList,
+  AnyKVItem,
+  AnyTooltip,
+  AnyEllipsisTooltip,
+}
 
 const install = {
   install(app: App) {
@@ -15,5 +23,12 @@ const install = {
   },
 }
 
-export { AnyGroup, AnyItem, AnyKVList, AnyKVItem, AnyTooltip }
+export {
+  AnyGroup,
+  AnyItem,
+  AnyKVList,
+  AnyKVItem,
+  AnyTooltip,
+  AnyEllipsisTooltip,
+}
 export default install

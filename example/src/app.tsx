@@ -1,5 +1,12 @@
 import { defineComponent } from 'vue'
-import { AnyGroup, AnyItem, AnyKVList, AnyKVItem, AnyTooltip } from '@/index'
+import {
+  AnyGroup,
+  AnyItem,
+  AnyKVList,
+  AnyKVItem,
+  AnyTooltip,
+  AnyEllipsisTooltip,
+} from '@/index'
 import './app.scss'
 
 export default defineComponent({
@@ -7,13 +14,22 @@ export default defineComponent({
   render() {
     return (
       <div>
+        <h1>AnyEllipsisTooltip</h1>
+        <AnyEllipsisTooltip text='1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' />
         <h1>AnyTooltip</h1>
-        <AnyTooltip title="x2x2x2x2">
-          {{
-            // title: () => <div>xxxxxx</div>,
-            default: () => <div>ssssss</div>,
-          }}
-        </AnyTooltip>
+        <div style="margin-left: 200px;width: 200px;">
+          <AnyTooltip
+            title="sss1111我师父11111ss1s"
+            onOpenChange={(e) => console.log(e)}
+          >
+            {{
+              // title: () => <div>xxxxxx</div>,
+              default: () => (
+                <div style="background: #ccc">sss1111我师父11111ss1s</div>
+              ),
+            }}
+          </AnyTooltip>
+        </div>
         <hr />
         <h1>AnyKVList</h1>
         <AnyKVList

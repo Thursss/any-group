@@ -1,20 +1,18 @@
 .any-tooltip__body {
-  z-index: 2230;
   position: absolute;
-  inset: auto auto 0 0;
-  border-radius: 5px;
-  padding: 5px 11px;
-  z-index: 2000;
-  font-size: 12px;
-  line-height: 20px;
-  min-width: 10px;
-  overflow-wrap: break-word;
-  visibility: visible;
-  .el-popper__arrow {
+  z-index: 2230;
+  .any-tooltip__content {
+    border-radius: 5px;
+    padding: 5px 10px;
+    overflow-wrap: break-word;
+    visibility: visible;
+    min-width: 10px;
+    max-width: 330px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .any-tooltip__arrow {
     position: absolute;
-    left: 0px;
-    transform: translate(37px, 0px);
-    bottom: -5px;
     width: 10px;
     height: 10px;
     z-index: -1;
@@ -32,29 +30,52 @@
       box-sizing: border-box;
     }
   }
+  // 位置
+  &.top {
+    .any-tooltip__arrow {
+      left: calc(50% - 5px);
+      bottom: -5px;
+    }
+  }
+  &.bottom {
+    .any-tooltip__arrow {
+      left: calc(50% - 5px);
+      top: -5px;
+    }
+  }
+  &.left {
+    .any-tooltip__arrow {
+      top: calc(50% - 5px);
+      right: -5px;
+    }
+  }
+  &.right {
+    .any-tooltip__arrow {
+      top: calc(50% - 5px);
+      left: -5px;
+    }
+  }
+  // 主题
   &.dark {
-    color: #ffffff;
-    background: #303133;
-    border: 1px solid #303133;
-    .el-popper__arrow::before {
+    .any-tooltip__content {
+      color: #ffffff;
+      background: #303133;
+      border: 1px solid #303133;
+    }
+    .any-tooltip__arrow::before {
       color: #ffffff;
       background: #303133;
       border: 1px solid #303133;
     }
   }
+  &.light {
+    .any-tooltip__content {
+      background: #ffffff;
+      border: 1px solid #e4e7ed;
+    }
+    .any-tooltip__arrow::before {
+      background: #ffffff;
+      border: 1px solid #e4e7ed;
+    }
+  }
 }
-
-// .any-tooltip__body {
-//   &.dark {
-//     color: #ffffff;
-//     background: #303133;
-//     border: 1px solid #303133;
-//   }
-// }
-// .el-popper__arrow::before {
-//   &.dark {
-//     color: #ffffff;
-//     background: #303133;
-//     border: 1px solid #303133;
-//   }
-// }

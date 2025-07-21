@@ -15,9 +15,11 @@ Vue.use(Any)
 按需引用
 import { AnyGroup, AnyItem } from 'any-group'
 ```
---- 
+
+---
 
 ### AnyGroup
+
 ```javascript
 <AnyGroup className="container">
   <AnyItem width={100}></AnyItem>
@@ -28,8 +30,9 @@ import { AnyGroup, AnyItem } from 'any-group'
 ```
 
 ### AnyKVList
+
 ```javascript
-<AnyKVList
+AnyEllipsisTooltip<AnyKVList
   align="right"
   list={[
     {
@@ -79,4 +82,25 @@ import { AnyGroup, AnyItem } from 'any-group'
     }}
   </AnyKVItem>
 </AnyKVList>
+```
+
+### AnyEllipsisTooltip
+
+```javascript
+<AnyEllipsisTooltip text='1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' />
+```
+
+### AnyTooltip
+```javascript
+  <AnyTooltip
+    title="sss1111我师父11111ss1s"
+    onOpenChange={(e) => console.log(e)}
+  >
+    {{
+      // title: () => <div>xxxxxx</div>,
+      default: () => (
+        <div style="background: #ccc">sss1111我师父11111ss1s</div>
+      ),
+    }}
+  </AnyTooltip>
 ```
